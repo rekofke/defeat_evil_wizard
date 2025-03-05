@@ -1,0 +1,30 @@
+Defeat the Evil Wizard
+Python terminal based rpg battle simulator.
+
+Description
+This is a project for the Advanced Python module at Coding Temple. It is a text based battle simulation where the goal is to select one of 4 pre-created characters. 
+Each character has different special abilities, an attack function, a heal function and the ability to view-stats. The goal is to alternate turns in an attempt to defeat the "Evil Wizard"
+before he defeats you.
+
+This project showcases the four pillars of object oriented programming: Abstraction, encapsulation, inheritance and polymorphism. 
+it focuses on knowledge learned about advanced python techniques.
+
+Getting Started
+
+Dependencies
+Python 3
+
+Installing
+1. in terminal type python3 git clone https://github.com/rekofke/defeat_evil_wizard.git
+2. Select either a 1. Warrior, 2. Mage, 3. Elf or 4. Rogue
+3. Select either Attack, Use special ability, Heal, View Stats, or Quit
+4. Defeat the Evil Wizard before he defeats you
+
+
+Authors
+Eric Rekofke
+Rekode Advanced Development
+
+
+License
+Copyright 2025 Rekode Advanced Development
