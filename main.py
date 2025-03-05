@@ -38,7 +38,8 @@ def battle(player, wizard):
         elif choice == '2':
             player.special_ability(wizard)
         elif choice == '3':
-            pass  # Implement heal method
+            player.health += 10
+            print(f"{player.name} drinks a healing potion and regenerates his health to {player,health}.")
         elif choice == '4':
             player.display_stats()
         else:
