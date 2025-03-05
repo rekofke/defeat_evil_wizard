@@ -30,6 +30,7 @@ def battle(player, wizard):
         print("2. Use Special Ability")
         print("3. Heal")
         print("4. View Stats")
+        print("5. Quit")
 
         choice = input("Choose an action: ")
 
@@ -39,9 +40,12 @@ def battle(player, wizard):
             player.special_ability(wizard)
         elif choice == '3':
             player.health += 10
-            print(f"{player.name} drinks a healing potion and regenerates his health to {player,health}.")
+            print(f"{player.name} drinks a healing potion and regenerates health to {player.health}.")
         elif choice == '4':
             player.display_stats()
+        elif choice == '5':
+            print(f"Game ended, thank you for playing.")
+            break
         else:
             print("Invalid choice. Try again.")
 
