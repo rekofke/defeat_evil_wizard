@@ -35,8 +35,7 @@ class Character:
     def display_stats(self):
         print(f"{self.name}'s Stats - Health: {self.health}/{self.max_health}, Attack Power: {self.attack_power}")
 
-# Warrior class
-#     
+# Warrior class    
 class Warrior(Character):
     def __init__(self, name):
         super().__init__(name, health=140, attack_power=25)
@@ -57,9 +56,11 @@ class Warrior(Character):
             if opponent.health <= 0:
                 print(f"{opponent.name} has been defeated!")
 
-        if action == '2':
+        elif action == '2':
             opponent.attack_power == opponent.attack_power // 2
             print(f"{self.name} uses Shield of fury and blocks half of the damage dealt.")
+        else:
+            print(f"Invalid option please try again.")
     
         
 
@@ -69,12 +70,28 @@ class Mage(Character):
     def __init__(self, name):
         super().__init__(name, health=100, attack_power=35)
 
+    def special_ability(self, opponent):
+        print('\n Select special ability:')
+        print('1. Cast lightning strike')
+        print('2. Summon ice storm')
+        action = input("Choose an ability: ")
+
+        if action == '1':
+            self.attack_power * 1.5
+            print(f"{self.name} uses magic to cast a lightning strike dealing 1.5 times damage for a total of {self.attack_power}.")
+        elif action == '2':
+            self.attack_power == 40
+            print(f"{self.name} summons an ice storm and deals 40 damage!!")
+        else:
+            print(f"Invalid option please try again.")
+
+
 # Elf class
 class Elf(Character):
     def __init__(self, name):
         super().__init__(name, health=100, attack_power=20)
     def special_ability(self, opponent):
-        print('\n Select special ability')
+        print('\n Select special ability:')
         print('1. Attack Boost ')
         print('2. Magic Heal')
         
@@ -87,6 +104,8 @@ class Elf(Character):
         elif action == '2':
             self.health == (self.health + self.max_health // 2)
             print(f"]\n{self.name} uses Magic Heal to boost their health to {self.max_health}. ")
+        else:
+            print(f"Invalid option please try again.")
 
 
 # Rogue Clas
@@ -112,6 +131,8 @@ class Rogue(Character):
         elif action == '2':
             self.evadeNextAttack == True
             print(f"{self.name} Uses Preemtive Dodge and will evade the next attack!")
+        else:
+            print(f"Invalid option please try again.")
 
 # EvilWizard class 
 class EvilWizard(Character):
